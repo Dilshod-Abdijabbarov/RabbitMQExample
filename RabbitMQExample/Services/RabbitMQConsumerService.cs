@@ -18,6 +18,12 @@ namespace RabbitMQExample.Services
             _channel = _connection.CreateModel();
             _channel.QueueDeclare(queue: "MyQueue", durable: false, exclusive: false, autoDelete: false, arguments: null);
         }
+
+
+
+
+
+
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
             stoppingToken.ThrowIfCancellationRequested();
